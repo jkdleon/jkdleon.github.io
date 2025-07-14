@@ -1,157 +1,193 @@
----
-layout: default
----
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>[Your Name] – Cybersecurity Enthusiast</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>[Your Name] – Cybersecurity Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #0d1117;
+      --fg: #c9d1d9;
+      --accent: #58a6ff;
+      --border: #30363d;
+      --header: #161b22;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      background: #0d1117;
-      color: #c9d1d9;
-      line-height: 1.6;
       margin: 0;
-      padding: 20px;
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      padding: 0 20px;
     }
-    h1, h2, h3 {
-      color: #58a6ff;
+
+    header {
+      background: var(--header);
+      padding: 30px 20px;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
     }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: var(--accent);
+    }
+
+    header p {
+      margin-top: 10px;
+      font-family: 'Fira Code', monospace;
+      color: #8b949e;
+    }
+
+    section {
+      margin: 40px auto;
+      max-width: 900px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-of-type {
+      border: none;
+    }
+
+    h2 {
+      color: var(--accent);
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+    }
+
     a {
-      color: #58a6ff;
+      color: var(--accent);
       text-decoration: none;
     }
+
     a:hover {
       text-decoration: underline;
     }
-    hr {
-      border: 0;
-      border-top: 1px solid #30363d;
-      margin: 30px 0;
-    }
+
     table {
       width: 100%;
       border-collapse: collapse;
       margin-top: 10px;
     }
+
     th, td {
-      border: 1px solid #30363d;
-      padding: 8px;
+      border: 1px solid var(--border);
+      padding: 10px;
       text-align: left;
     }
+
     ul {
-      list-style-type: square;
       padding-left: 20px;
     }
+
     .project {
       margin-bottom: 20px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 60px;
+      color: #8b949e;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 10px;
+      }
+      header h1 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <h1>👨‍💻 [Your Name] – Cybersecurity Enthusiast</h1>
-  <p>
-    Welcome to my cybersecurity ePortfolio! I'm a self-taught cybersecurity learner with a passion for ethical hacking, network defense, and digital forensics. This site showcases the projects, tools, and labs I've completed on my journey to becoming a cybersecurity professional.
-  </p>
+  <header>
+    <h1>👨‍💻 [Your Name]</h1>
+    <p>Cybersecurity Enthusiast • Self-Taught Analyst • Portfolio</p>
+  </header>
 
-  <hr>
+  <section>
+    <h2>🔍 About Me</h2>
+    <p>
+      I'm a self-taught cybersecurity learner with a passion for ethical hacking, network defense, and digital forensics. I build tools, complete labs, and write technical breakdowns of everything I learn. My goal is to become a cybersecurity analyst, and this site showcases my journey.
+    </p>
+    <p><strong>Currently exploring:</strong></p>
+    <ul>
+      <li>Penetration Testing</li>
+      <li>Wireshark for Packet Analysis</li>
+      <li>Nmap & Burp Suite</li>
+      <li>CTF Challenges & Write-ups</li>
+    </ul>
+  </section>
 
-  <h2>🔍 About Me</h2>
-  <p>
-    I'm an aspiring cybersecurity analyst with hands-on experience through platforms like TryHackMe and Hack The Box. My learning is self-driven, and I'm constantly building new skills in network security, vulnerability assessment, and incident response.
-  </p>
-  <p><strong>Currently exploring:</strong></p>
-  <ul>
-    <li>Penetration Testing</li>
-    <li>Wireshark for packet analysis</li>
-    <li>Nmap and Burp Suite</li>
-    <li>CTF-style challenges</li>
-  </ul>
+  <section>
+    <h2>🛠️ Tools & Technologies</h2>
+    <table>
+      <tr><th>Tool</th><th>Purpose</th></tr>
+      <tr><td><strong>Nmap</strong></td><td>Network scanning</td></tr>
+      <tr><td><strong>Wireshark</strong></td><td>Packet capture & analysis</td></tr>
+      <tr><td><strong>Burp Suite</strong></td><td>Web app security testing</td></tr>
+      <tr><td><strong>Kali Linux</strong></td><td>Pen-testing environment</td></tr>
+      <tr><td><strong>Python</strong></td><td>Scripting & automation</td></tr>
+    </table>
+  </section>
 
-  <hr>
+  <section>
+    <h2>💼 Projects</h2>
+    <div class="project">
+      <h3>🔐 <a href="#">VulnHub: Basic Pentest 1</a></h3>
+      <p>Full penetration test including enumeration, brute-force login, and privilege escalation. Includes step-by-step report.</p>
+    </div>
 
-  <h2>🛠️ Tools & Technologies</h2>
-  <table>
-    <tr>
-      <th>Tool</th>
-      <th>Purpose</th>
-    </tr>
-    <tr>
-      <td><strong>Nmap</strong></td>
-      <td>Network scanning</td>
-    </tr>
-    <tr>
-      <td><strong>Wireshark</strong></td>
-      <td>Packet capture & analysis</td>
-    </tr>
-    <tr>
-      <td><strong>Burp Suite</strong></td>
-      <td>Web app security testing</td>
-    </tr>
-    <tr>
-      <td><strong>Kali Linux</strong></td>
-      <td>Pen-testing environment</td>
-    </tr>
-    <tr>
-      <td><strong>Python</strong></td>
-      <td>Scripting and automation</td>
-    </tr>
-  </table>
+    <div class="project">
+      <h3>🧪 <a href="#">Wireshark Traffic Analysis</a></h3>
+      <p>Analyzed network captures to detect anomalies and trace attacker behavior using pcap files.</p>
+    </div>
 
-  <hr>
+    <div class="project">
+      <h3>💻 <a href="#">Custom Python Port Scanner</a></h3>
+      <p>Built a basic TCP port scanner with Python and sockets. Includes CLI interface and scanning logs.</p>
+    </div>
+    <p><em>See more in the Projects folder →</em></p>
+  </section>
 
-  <h2>💼 Projects</h2>
+  <section>
+    <h2>🧠 Write-Ups & Labs</h2>
+    <ul>
+      <li><a href="#">TryHackMe: Blue</a></li>
+      <li><a href="#">HackTheBox: Lame</a></li>
+      <li><a href="#">My Custom CTF Challenge</a></li>
+    </ul>
+  </section>
 
-  <div class="project">
-    <h3>🔐 <a href="link-to-project">VulnHub Machine: "Basic Pentest 1"</a></h3>
-    <p>Performed a full penetration test, documented all findings, and created a step-by-step walkthrough. Skills used: enumeration, brute-force, privilege escalation.</p>
-  </div>
+  <section>
+    <h2>📜 Certifications & Learning</h2>
+    <ul>
+      <li>🕓 CompTIA Security+ (In Progress)</li>
+      <li>✅ TryHackMe: Complete Beginner Path</li>
+      <li>✅ TCM Security: Practical Ethical Hacking</li>
+    </ul>
+  </section>
 
-  <div class="project">
-    <h3>🧪 <a href="link-to-project">Wireshark Traffic Analysis</a></h3>
-    <p>Analyzed a pcap file for suspicious activity. Identified malicious payloads and reconstructed attacker behavior.</p>
-  </div>
+  <section>
+    <h2>📫 Contact</h2>
+    <ul>
+      <li>Email: <a href="mailto:yourname@example.com">yourname@example.com</a></li>
+      <li>LinkedIn: <a href="#">linkedin.com/in/yourname</a></li>
+      <li>GitHub: <a href="#">github.com/yourusername</a></li>
+    </ul>
+  </section>
 
-  <div class="project">
-    <h3>💻 <a href="link-to-code">Custom Python Port Scanner</a></h3>
-    <p>Wrote a basic Python script to scan target hosts and report open ports.</p>
-  </div>
-
-  <p><em>See more in the Projects folder →</em></p>
-
-  <hr>
-
-  <h2>🧠 Write-Ups & Labs</h2>
-  <ul>
-    <li><a href="link">TryHackMe: Blue</a></li>
-    <li><a href="link">HackTheBox: Lame</a></li>
-    <li><a href="link">Custom CTF challenge I created</a></li>
-  </ul>
-
-  <hr>
-
-  <h2>📜 Certifications & Learning</h2>
-  <ul>
-    <li>[ ] CompTIA Security+ (In Progress)</li>
-    <li>[x] TryHackMe: Complete Beginner Path</li>
-    <li>[x] TCM Security: Practical Ethical Hacking (PEH)</li>
-  </ul>
-
-  <hr>
-
-  <h2>📫 Contact Me</h2>
-  <ul>
-    <li>📧 Email: yourname@example.com</li>
-    <li>🌐 LinkedIn: <a href="#">linkedin.com/in/yourname</a></li>
-    <li>🐱 GitHub: <a href="#">github.com/yourusername</a></li>
-  </ul>
-
-  <hr>
-  <p><em>This site is built and hosted with <a href="https://pages.github.com" target="_blank">GitHub Pages</a>.</em></p>
+  <footer>
+    <p>Site built & hosted via <a href="https://pages.github.com" target="_blank">GitHub Pages</a>.</p>
+  </footer>
 
 </body>
 </html>
