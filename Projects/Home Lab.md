@@ -26,11 +26,11 @@ This progressive project demonstrates the design and implementation of a home la
 
 1. Downloaded [Windows Media Creation Tool](https://www.microsoft.com/en-us/software-download/windows10)
 2. Downloaded [Kali Linux](https://www.kali.org/get-kali/#kali-platforms)
-  - Virtual Machine Option
+    - Virtual Machine Option
 3. Downloaded Oracle [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 4. Verified the file hash of the installer.
-  - Using powershell Get-FileHash command
-  - Verifying the generated hash in File Checksum page of VirtualBox
+    - Using powershell Get-FileHash command
+    - Verifying the generated hash in File Checksum page of VirtualBox
 5. Installed the Windows 10 and Kali Linux OS in VirtualBox
 
 ---
