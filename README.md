@@ -9,5 +9,3 @@
 - Certifications & Skills
 - Contact Info
 
-## 🛠 Tools Used
-
