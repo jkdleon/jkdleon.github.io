@@ -1,3 +1,3 @@
 # About
 
-This folder is for cybersecurity projects.
+This is the projects folder. In this folder are the list of projects I have done.
