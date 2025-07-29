@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOC Automation Project</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ====== HEADER ====== -->
+  <header>
+    <h1>SOC Automation Project Part 3</h1>
+  </header>
+
+  <!-- ====== Overview ====== -->
+  <section id="about">
+    <h2>Overview</h2>
+    <p>
+      This is part 3 of the SOC Automation Project. This part demonstrates how to deploy an agent in Wazuh. This part of the project also showcase how to generate telemetry, ingest sysmon logs into Wazuh. Lastly, demonstrates how to create an index pattern and rule in Wazuh.
+  </section>
+  
+  <section id="goals">
+    <h2>Project Goal</h2>
+    <p>
+      - Implement a SOC environment with Wazuh as the SIEM/XDR, TheHive for case management and integrate it to Shuffle for SOAR capabilities.
+    </p>
+    
+  <!-- ====== Tools and Technologies ====== -->
+  <section id="tools">
+    <h2>Tools and Technologies</h2>
+    <p>
+      - Wazuh<br>
+      - Sysmon<br>
+      - Mimikatz<br>
+      - Windows 10<br>
+    </p>
+  </section>
+  
+  </section>
+    <section id="objectives">
+    <h2>Wazuh Agent Deployment, Generate Telemetry, Index and Rule Creation</h2>
+    <p>Objectives</p>
+    <p style=text-indent:30px;>
+        -Deploy Wazuh agent in windows 10 host.<br>
+        -Create an index pattern.<br>
+        -Create a custom rule.<br>
+        -Ingest sysmon logs into Wazuh.<br>
+        -Generate telemetry using Mimikatz.<br>
+    </p>
+  </section>
+  
+  <section id="whatidid">
+    <h2>What I did</h2>
+    <p>
+        1. Deployed wazuh agent in Windows 10 host using powershell<br>
+        2. Configured Wazuh to ingest sysmon logs<br>
+        3. Configured Wazuh to archive logs and created an index pattern for it.
+        4. Generated telemetry using Mimikatz in Windows 10 host.
+        5. Created a rule for the generated telemetry to test Wazuh capabilities.
+    
+    </p>
+    </section>
+  <section id="skills">
+    <h2>Skills Demonstrated</h2>
+    <p>
+      - Incident Detection and Response<br>
+      - SIEM Configuration and Rule Creation<br>
+      - Endpoint Security and Monitoring<br>
+      - Log Management<br>
+      - Security Testing<br>
+      - Threat Detection
+    </p>
+    </section>
+
+  <section id="takeaway">
+    <h2>Key Takeaway</h2>
+    <p>
+     This part of the project deepened my understanding on how to configure the SIEM, create rules for detection/response, and monitor endpoint in the SIEM application.
+  </section>
+
+
+  <section id="artifacts">
+    <h2>Artifacts</h2>
+    <p>
+     <a href="https://www.loom.com/share/d001b8d0c2ca4c76ac93b74719f633ae?sid=57c49f29-f1f7-477a-bbbe-3c18eff19412">Wazuh Agent Deployment</a><br>
+     <a href="https://www.loom.com/share/2adfca2a20ab4cb9b722383fcedda4d3?sid=dd533fb5-5a58-4c29-b0aa-b8845b80aab1">Sysmon Log Ingestion and Rule Creation</a>
+    </p>
+  </section>
+
+
+  <footer>
+    <p>© 2025 James Kyle De Leon</p>
+  </footer>
+
+</body>
+</html>
