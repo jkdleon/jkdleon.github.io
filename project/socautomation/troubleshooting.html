@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOC Automation Project</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ====== HEADER ====== -->
+  <header>
+    <h1>SOC Automation Project - Troubleshooting</h1>
+  </header>
+
+  <!-- ====== Overview ====== -->
+  <section id="about">
+    <h2>Overview</h2>
+    <p>This page is all about the problems I encountered and how I troubleshoot it. </p>
+  </section>
+
+  <section id="problems and errors">
+    <h2>Problems</h2>
+    <p>
+    1. Error in installing cassandra service.<br>
+    2. Error in configuring cassandra and elasticsearch service.<br>
+    3. Error in integrating TheHive and Shuffle.<br>
+    4. Problem in the created json body when using the fields given by TheHive app in Shuffle.
+    </p>
+  </section>
+  
+  </section>
+    <section id="">
+    <h2>Error in installing cassandra service</h2>
+    <p>Problem Encountered</p>
+    <p style=text-indent:30px;>
+        When installing cassandra service I've run into an error stating that the package is not available eventhough I've already importedt the GPG key and added Cassandra's repository.
+    </p>
+    <p>Troubleshooting</p>
+    <p style="text-indent: 30px;">
+        What I did to resolve this issue is to directly download the package from cassandra <a href="https://cassandra.apache.org/_/index.html">website</a> into TheHive machine.<br>
+        After downloading the package directly into the machine, installation did not encounter errors anymore.
+    </p>
+  </section>
+
+    </section>
+    <section id="">
+    <h2>Error in configuring cassandra and elasticsearch service.</h2>
+    <p>Problem Encountered</p>
+    <p style=text-indent:30px;>
+        When configuring both cassandra and elasticsearch, I've run into an IP address binding error. Upon checking the public address given by Azure was not binding in the service. I used the public address given by the cloud provider in this project but best practice to use private addresses
+        in configuring cassandra and elesticsearch.
+    </p>
+    <p>Troubleshooting</p>
+    <p style="text-indent: 30px;">
+        What I did to resolve this issue is to host the TheHive instance in <a href="https://DigitalOcean.com">DigitalOcean</a> since is not allowing to bind their public address to services.
+        Upon hosting again the instance in DigitalOcean, I have not run into any errors configuring the services.
+    </p>
+  </section>
+
+      </section>
+    <section id="">
+    <h2>Error in integrating Wazuh and Shuffle.</h2>
+    <p>Problem Encountered</p>
+    <p style=text-indent:30px;>
+        In making the workflow in Shuffle and configuring Wazuh, I run into an error: unable to enable integration for: 'shuffler'. File not found inside 'integrations'.
+    </p>
+    <p>Troubleshooting</p>
+    <p style="text-indent: 30px;">
+        I checked my ossec.conf file again if I just mistyped the name of the integration but the configuration is correct. After that I looked where 'shuffler' is mentioned and found that
+        it was only mentioned in the hook_url line in the integration block. I've tried using the backup ossec.conf but I still run into the error. I also tried to use a link shortener to check if 'shuffler' in the hook_url
+        was just being misinterpreted but still run into the error. I searched the web and found that cleaning up the old queue files might help in resolving the issue. I cleaned up the old queue files,
+        restarted the Wazuh manager and tested again. Now I did not run into any errors.
+    </p>
+  </section>
+
+    <section id="">
+    <h2>Problem in the created json body when using the fields given by TheHive app in Shuffle.</h2>
+    <p>Problem Encountered</p>
+    <p style=text-indent:30px;>
+        The problem I encountered was that the variable was not being replaced by the value I inputted in the given field by TheHive app.
+    </p>
+    <p>Troubleshooting</p>
+    <p style="text-indent: 30px;">
+        What I did is to check the given error and tried to go from there. One by one I tried to fix the error but when I tried to fix 1 error, another different error would come up. Checked the apps resolved issues if I can find any relevant document about it
+        but found nothing. In TheHive app, there is an advance option where you can create your own json for the app to be used, so instead of forking the app and editing the fields inside, I tried using the advance option and created the json body, editing all the necassary line
+        that had an error and run the workflow again. After using the advance option, no errors encountered and an alert was created in TheHive dashboard.
+    </p>
+  </section>
+
+    <section id="takeaway">
+    <h2>Key Takeaway</h2>
+    <p>
+        1. Always have a fallback plan like manual installation when package repositories fail.<br>
+        2. Persistent errors may be due to residual files.<br>
+        3. Cloud provider limitations.<br>
+        4. If the UI form fails, use the manual option if available.<br>
+        5. Taught me how to stay persistent and use alternative approach in resolving problems.
+    </p>
+  </section> 
+
+  
+  <section id="parts">
+    <hr2>Project Parts</hr2>
+    <a href="https://jkdleon.github.io/project/socautomation/index.html">Part 1</a>, <a href="https://jkdleon.github.io/project/socautomation/part2.html">Part 2</a>, <a href="https://jkdleon.github.io/project/socautomation/part3.html">Part 3</a>, <a href="https://jkdleon.github.io/project/socautomation/part4.html">Part 4</a>
+  </section>
+
+  <footer>
+    <p>© 2025 James Kyle De Leon</p>
+  </footer>
+
+</body>
+</html>
