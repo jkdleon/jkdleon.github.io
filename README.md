@@ -1,4 +1,4 @@
-# Cybersecurity Portfolio - James Kyle De Leon
+# Portfolio - James Kyle De Leon
 
 ## 🔗 Live Site
 [ePortfolio Website](https://jkdleon.github.io)
